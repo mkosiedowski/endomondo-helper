@@ -20,3 +20,15 @@ If you want to delete a workout:
 ```
 ./delete.php WORKOUT_ID
 ```
+##Running with docker
+###Run composer
+```
+docker run --rm -v "$PWD":/app composer/composer install -n
+```
+###Run commands
+```bash
+docker run --rm -v "$PWD":/endomondo -w /endomondo php:cli php add.php 15:25 16 4.3
+```
+```bash
+docker run --rm -v "$PWD":/endomondo -w /endomondo php:cli php delete.php WORKOUT_ID
+```
