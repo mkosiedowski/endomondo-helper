@@ -1,0 +1,13 @@
+{
+    "name": "mkosiedowski/endomondo",
+    "type": "project",
+    "require": {
+        "fabulator/endomondo": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Maciej Kosiedowski",
+            "email": "maciej.kosiedowski@schibsted.pl"
+        }
+    ]
+}
