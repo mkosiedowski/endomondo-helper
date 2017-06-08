@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+date_default_timezone_set("Europe/Warsaw");
 include('vendor/autoload.php');
 include('secret.php');
 
