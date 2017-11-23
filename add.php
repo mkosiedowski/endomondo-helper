@@ -6,7 +6,13 @@ include('secret.php');
 
 $endomondo = new \Fabulator\Endomondo\Endomondo();
 $endomondo->login(ENDOMONDO_USERNAME, ENDOMONDO_PASSWORD);
-if ($argc == 4) {
+if ($argc == 5) {
+    $date = new \DateTime($argv[1] . ' ' . $argv[2]);
+    $time = intval($argv[3]);
+    $endDate = clone $date;
+    $endDate->modify("+{$time} minutes");
+    $length = floatval($argv[4]);
+} elseif ($argc == 4) {
     $date = new \DateTime($argv[1]);
     $time = intval($argv[2]);
     $endDate = clone $date;
